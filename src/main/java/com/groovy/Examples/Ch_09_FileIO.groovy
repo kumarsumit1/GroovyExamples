@@ -1,23 +1,23 @@
 package com.groovy.Examples;
 
 
-class Ch_09_FileIO {
-
-	static void main(args) {
+//class Ch_09_FileIO {
+//
+//	static void main(args) {
 		// ---------- FILE IO ----------
-
+def filePath = "src/main/resources/test.txt"
   // Open a file, read each line and output them
-  new File("test.txt").eachLine {
+  new File(filePath).eachLine {
     line -> println "$line";
   }
 
   // Overwrite the file
-  new File("test.txt").withWriter('utf-8') {
+  new File(filePath).withWriter('utf-8') {
     writer -> writer.writeLine("Line 4");
   }
 
   // Append the file
-  File file = new File("test.txt");
+  File file = new File(filePath);
   file.append('Line 5');
 
   // Get the file as a string
@@ -45,5 +45,5 @@ class Ch_09_FileIO {
 
 
 		
-	}
-}
+//	}
+//}
