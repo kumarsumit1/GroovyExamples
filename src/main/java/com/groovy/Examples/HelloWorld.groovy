@@ -2,8 +2,14 @@ package com.groovy.Examples
 
 class HelloWorld {
 
-	static void main(args) {
-		println("Hello")
-		
+
+		String getMessage(boolean bigger) {
+		if (bigger) {
+			return "Hello Universe!";
+		} else {
+			return "Hello World!";
+		}
 	}
+		
+
 }
